@@ -1,6 +1,6 @@
 # Mojaloop Background
 
-### Mojaloop Background
+## Mojaloop Background
 
 Mojaloop grew out of principles set forth by the Financial Services for the Poor team at the Bill & Melinda Gates Foundation. These principles form the cornerstone of the Level One Project, which is the foundation's initiative for designing and implementing digital financial services and systems to include and benefit the world's 2 billion unbanked. The code won't address the gap in digital financial services on its own, but it can help service providers open markets and accelerate progress.
 

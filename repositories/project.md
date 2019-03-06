@@ -6,7 +6,7 @@ The [project repository](https://github.com/mojaloop/project) is the central rep
 
 * All work is tracked in GitHub and assigned to specific milestones.
 * To review open work items go to: [https://github.com/mojaloop/project/issues](https://github.com/mojaloop/project/issues)
-* To jump and get started, review any stories that are tagged with "[good first issue](https://github.com/mojaloop/project/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)"
+* To jump and get started, review any stories that are tagged with "[good first issue](https://github.com/mojaloop/project/issues?q=is%3Aopen+is%3Aissue+label%3A"good+first+issue")"
 * To file a new bug or feature request, follow the templates below.
 * We also use "Zenhub" a GitHub plug-in to visualize the stories and associated swim lanes.
 
@@ -40,7 +40,7 @@ The [project repository](https://github.com/mojaloop/project) is the central rep
 
 ### **Goal**:
 
-As a  I want to  so that 
+As a I want to so that
 
 **Tasks**:
 
@@ -71,6 +71,4 @@ As a  I want to  so that
 
 * Owner: TBC
 * QA/Review: TBC
-
-
 

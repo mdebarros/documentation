@@ -67,87 +67,94 @@ This provides environment resource recommendations with a view of the infrastruc
 
 The tool set to be deployed as part of the deployment process.
 
+| Tool | Required/Optional | Description | Install Info |
+| :--- | :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Tool</th>
-      <th style="text-align:left">Required/Optional</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Install Info</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Docker</td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Docker</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">
         <p>Docker Engine and CLI Client</p>
         <p>Local Kubernetes single node cluster</p>
-      </td>
-      <td style="text-align:left">[https://docs.docker.com/install](https://docs.docker.com/install)</td>
+      </th>
+      <th style="text-align:left">[https://docs.docker.com/install](https://docs.docker.com/install)</th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Kubectl</td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Kubectl</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">
         <p>Kubernetes CLI for Kubernetes Management</p>
         <p>Note Docker installs this part of Kubernetes install</p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p>[https://kubernetes.io/doc/tasks/tools/install-kuberctl](https://kubernetes.io/docs/tasks/tools/install-kubectl)</p>
         <p>Docker Kubernetes Install (as per this guide)</p>
         <p><b>Mac:</b> `brew install kubernetes-cli`</p>
         <p><b>Ubuntu:</b> `sudo snap install kubectl --classic`</p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Kubectx</td>
-      <td style="text-align:left">Optional(useful tool)</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Kubectx</th>
+      <th style="text-align:left">Optional(useful tool)</th>
+      <th style="text-align:left">
         <p>Kubernetes CLI for Kubernetes Context Management Helper</p>
         <p>Note Docker installs this as part of Kubernetes install</p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p>[https://github.com/ahmetb/kubectx](https://github.com/ahmetb/kubectx)</p>
         <p><b>Mac:</b> `brew install kubectx`</p>
         <p><b>Ubuntu:</b> `sudo apt install kubectx`</p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Kubetail</td>
-      <td style="text-align:left">Optional(useful tool)</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Kubetail</th>
+      <th style="text-align:left">Optional(useful tool)</th>
+      <th style="text-align:left">
         <p>Bash script that enables you to aggregate (tail/follow) logs from multiple
           pods into one stream. This is the same as running `kubectl logs -f` but
           for multiple pods.</p>
         <p>Example usage `kubetail moja.* -n demo`</p>
-      </td>
-      <td style="text-align:left">https://github.com/johanhaleby/kubetail</td>
+      </th>
+      <th style="text-align:left">https://github.com/johanhaleby/kubetail</th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Helm</td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Helm</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">
         <p>Helm helps you manage Kubernetes applications</p>
         <p>Helm charts help you define, install and upgrade even the most complex
           Kubernetes application</p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p>[https://docs.helm.sh/using_helm/#installing-helm](https://docs.helm.sh/using_helm/#installing-helm)</p>
         <p><b>Mac:</b> `brew install kubernetes-helm`</p>
         <p><b>Ubuntu:</b> `sudo snap install helm --classic`</p>
-      </td>
+      </th>
     </tr>
-    <tr>
-      <td style="text-align:left">Postman</td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">Postman is a Google Chrome application for the interacting with HTTP API&apos;s.
-        It presents you with a friendly GUI for the construction requests and reading
-        responces.</td>
-      <td style="text-align:left">[https://www.getpostman.com/apps](https://www.getpostman.com/apps)</td>
-    </tr>
-  </tbody>
-</table>## 2 Deployment
+  </thead>
+  <tbody></tbody>
+</table>| Postman | Required | Postman is a Google Chrome application for the interacting with HTTP API's. It presents you with a friendly GUI for the construction requests and reading responces. | \[https://www.getpostman.com/apps\]\(https://www.getpostman.com/apps\) |
+| :--- | :--- | :--- | :--- |
+
 
 This section will guide the reader through the deployment process to setup Kubernetes within Docker.
 

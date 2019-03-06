@@ -2,7 +2,7 @@
 
 ## Mojaloop Services
 
-The following architecture diagram shows the Mojaloop services: 
+The following architecture diagram shows the Mojaloop services:
 
 ![Mojaloop Services](../.gitbook/assets/arch-flows-end-to-end.png)
 
