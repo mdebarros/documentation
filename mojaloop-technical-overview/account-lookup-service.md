@@ -1,4 +1,4 @@
-# Central-Ledger Services
+# Account-Lookup-Service
 
 The Account Lookup Service as per the Mojaloop specification has the following use-cases:
 
@@ -8,11 +8,15 @@ The Account Lookup Service as per the Mojaloop specification has the following u
 
 ## Participant
 
-![](../Diagrams/ArchitectureDiagrams/Arch-Flow-Account-Lookup-Paticipants.svg)
-
+![](../.gitbook/assets/arch-flow-account-lookup-paticipants.svg)
 
 ## Party
 
-![](../Diagrams/ArchitectureDiagrams/Arch-Flow-Account-Lookup-Parties.svg)
+![](../.gitbook/assets/arch-flow-account-lookup-parties%20%281%29.svg)
 
-![](../Diagrams/random/bestimageontheinternet.jpeg)
+![testing caption](../.gitbook/assets/bestimageontheinternet.jpeg)
+
+
+
+Lolcats FTW
+

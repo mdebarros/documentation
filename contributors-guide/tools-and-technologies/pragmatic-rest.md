@@ -112,7 +112,7 @@ As we design the interconnection APIs between components and between participati
 
 As we develop the APIs, we will make consistent choices about non-functional requirements to reinforce the project goals.
 
-1: [http://martinfowler.com/articles/richardsonMaturityModel.html](Richardson%20Maturity%20Model), retrieved August 18, 2016.
+1: [http://martinfowler.com/articles/richardsonMaturityModel.html](https://github.com/mdebarros/documentation/tree/a7f9e256d9c8fb25af5e0be90966395b068670ec/contributors-guide/tools-and-technologies/Richardson%20Maturity%20Model/README.md), retrieved August 18, 2016.
 
 2: [https://www.amazon.com/gp/product/0596805829](https://www.amazon.com/gp/product/0596805829?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596805829), retrieved August 18, 2016.
 
