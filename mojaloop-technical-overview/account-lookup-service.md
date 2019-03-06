@@ -1,5 +1,7 @@
 # Account-Lookup-Service
 
+&lt;swagger&gt;https://raw.githubusercontent.com/mojaloop/mojaloop-specification/master/Supporting%20Files/fspiop-rest-v1.0-OpenAPI-implementation\_openapi3.yaml&lt;/swagger&gt;
+
 The Account Lookup Service as per the Mojaloop specification has the following use-cases:
 
 * Participant Look-up
@@ -20,4 +22,5 @@ The Account Lookup Service as per the Mojaloop specification has the following u
 
 Lolcats FTW
 
-<swagger>https://raw.githubusercontent.com/mojaloop/mojaloop-specification/master/Supporting%20Files/fspiop-rest-v1.0-OpenAPI-implementation\_openapi3.yaml</swagger>
+{% embed url="https://raw.githubusercontent.com/mojaloop/mojaloop-specification/master/Supporting%20Files/fspiop-rest-v1.0-OpenAPI-implementation\\\_openapi3.yaml" %}
+
