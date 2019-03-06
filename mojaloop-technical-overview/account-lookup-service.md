@@ -20,3 +20,5 @@ The Account Lookup Service as per the Mojaloop specification has the following u
 
 Lolcats FTW
 
+<swagger>https://raw.githubusercontent.com/mojaloop/mojaloop-specification/master/Supporting%20Files/fspiop-rest-v1.0-OpenAPI-implementation_openapi3.yaml</swagger>
+
