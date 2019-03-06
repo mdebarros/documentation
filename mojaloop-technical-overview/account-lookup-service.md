@@ -16,11 +16,9 @@ The Account Lookup Service as per the Mojaloop specification has the following u
 
 ![testing caption](../.gitbook/assets/bestimageontheinternet.jpeg)
 
-![testing captionv2](../.gitbook/assets/test/bestimageontheinternetv2.jpeg)
-
-
+![testing captionv2 www](../.gitbook/assets/bestimageontheinternetv2.jpeg)
 
 Lolcats FTW
 
-<swagger>https://raw.githubusercontent.com/mojaloop/mojaloop-specification/master/Supporting%20Files/fspiop-rest-v1.0-OpenAPI-implementation_openapi3.yaml</swagger>
+https://raw.githubusercontent.com/mojaloop/mojaloop-specification/master/Supporting%20Files/fspiop-rest-v1.0-OpenAPI-implementation\_openapi3.yaml
 
