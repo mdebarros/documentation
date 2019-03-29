@@ -1,8 +1,6 @@
 # Mojaloop Setup for Ubuntu
 The document is intended for an audience with a stable technical knowledge and would like to setup an environment for development, testing and contributing to the Mojaloop project.
 
-Before proceeding, please insure you have reviewed [mojaloop-deployment](mojaloop-local-deployment.md).
-
 ## Setup Introduction
 This document will provide guidelines to a technical capable resources to setup, deploy and configure the Mojaloop applications on a local environment, utilizing Docker, Kubernetes and HELM charts.
 
@@ -183,4 +181,11 @@ Errors encountered and the solutions to be documented within this section.
             "WITH_SASL": 0
           }
     ```
-    
+
+### 5 Deployment
+
+**** TODO
+**** ADD NOTE kubectl command alias or use the microk8s.kubectl command instead
+**** ADD NOTE docker command alias or use the microk8s.docker command instead
+
+Refer to [Mojaloop's deployment guide](./README.md).

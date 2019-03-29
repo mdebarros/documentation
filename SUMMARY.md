@@ -1,12 +1,13 @@
 # Table of contents
 
 * [Mojaloop Overview](README.md)
+* [Deployment Guide](deployment-guide/README.md)
+    * [Current Version](deployment-guide/current-versions.md)
+    * [Local Setup Linux](deployment-guide/mojaloop-local-setup-linux.md)
+    * [Local Setup Mac](deployment-guide/mojaloop-local-setup-mac.md)
+    * [Local Setup Windows](deployment-guide/mojaloop-local-setup-windows.md)
+    * [Troubleshooting](deployment-guide/mojaloop-deployment-troubleshooting.md)
 * [Contributors Guide](contributors-guide/README.md)
-  * [Mojaloop Deployment](contributors-guide/mojaloop-deployment/README.md)
-    * [Current Version](contributors-guide/mojaloop-deployment/current-versions.md)
-    * [Mojaloop Local Deployment](contributors-guide/mojaloop-local-deployment.md)
-    * [Mojaloop Local Setup Linux](contributors-guide/mojaloop-local-setup-linux.md)
-    * [Mojaloop Local Setup Mac](contributors-guide/mojaloop-local-setup-mac.md)
   * [Standards](contributors-guide/standards/README.md)
     * [Versioning](contributors-guide/standards/versioning.md)
     * [Creating new Features](contributors-guide/standards/creating-new-features.md)

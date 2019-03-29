@@ -1,7 +1,7 @@
 # Mojaloop local environment setup for Mac
 The document is intended for an audience with a stable technical knowledge and would like to setup an environment for development, testing and contributing to the Mojaloop project.
 
-Before proceeding, please insure you have reviewed [mojaloop-deployment](mojaloop-local-deployment.md).
+Before proceeding, please insure you have reviewed [Mojaloop's deployment guide](./README.md).
 
 ## Setup Introduction
 
@@ -11,8 +11,6 @@ This document will provide guidelines to deploy and configure the Mojaloop appli
   * [Kubernetes](mojaloop-local-setup-mac.md#1-kubernetes)
     * [Kubernetes Installation with Docker](mojaloop-local-setup-mac.md#11-kubernetes-installation-with-docker)
     * [Kubernetes environment setup](mojaloop-local-setup-mac.md#12-kubernetes-environment-setup)
-* [Errors During Setup](mojaloop-local-setup-mac.md#2-errors-on-setup)
-
 
 ## Local Deployment
 
@@ -114,7 +112,7 @@ To install Kubernetes with Docker, follow the steps below;
     * Increase the CPU allocation to at least 4
     * Increase the Memory allocation to at least 8.0 GiB
 
-![Kubernetes Install with Docker 1](../assets/Diagrams/Kubernetes/kubernetesInstallWithDocker-1.png)
+![Kubernetes Install with Docker 1](./assets/diagrams/deployment/KubernetesInstallWithDocker-1.png)
 
 * Go to **Kubernetes**
   * Select **Enable Kubernetes** tick box
@@ -123,7 +121,7 @@ To install Kubernetes with Docker, follow the steps below;
   * Click **Install** on the confirmation tab. 
   * The option is available to wait for completion or run as a background task.
 
-![Kubernetes Install with Docker 2](../assets/Diagrams/Kubernetes/kubernetesInstallWithDocker-2.png)
+![Kubernetes Install with Docker 2](./assets/diagrams/deployment/KubernetesInstallWithDocker-2.png)
 
 #### 1.2 Kubernetes environment setup:
 
@@ -145,6 +143,3 @@ To install Kubernetes with Docker, follow the steps below;
    ```bash
    kubectx docker-for-desktop
    ```
-
-### 2 Errors On Setup
-Errors encountered and the solutions to be documented within this section.

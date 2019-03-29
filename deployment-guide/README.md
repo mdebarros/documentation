@@ -1,27 +1,34 @@
 # Mojaloop Deployment
+
 The document is intended for an audience with a stable technical knowledge and would like to setup an environment for development, testing and contributing to the Mojaloop project.
 
-## Deployment and Setup Introduction
+## Deployment and Setup
 
-This document will provide guidelines to deploy and configure the Mojaloop applications on a local environment, utilizing Kubernetes within Docker.
-
-  * [Software List](mojaloop-local-deployment.md#1-software-list)
-    * [Deployment Recommendations](mojaloop-local-deployment.md#11-deployment-recommendations)
-  * [Local Deployment and Testing Tools](mojaloop-local-deployment.md#2-local-deployment-and-testing-tools)
-    * [MAC environment](mojaloop-local-deployment.md#21-mac-environment)
-    * [LINUX environment](mojaloop-local-deployment.md#21-linux-environment)
-  * [Kubernetes Dashboard](mojaloop-local-deployment.md#3-kubernetes-dashboard)
-  * [Helm](mojaloop-local-deployment.md#4-helm)
-    * [Helm configuration](mojaloop-local-deployment.md#41-helm-configuration)
-  * [Postman](mojaloop-local-deployment.md#5-postman)
-    * [Installing Postman](mojaloop-local-deployment.md#51-installing-postman)
-    * [Setup Postman](mojaloop-local-deployment.md#52-setup-postman)
-  * [Errors On Setup](mojaloop-local-deployment.md#6-errors-on-setup)
+  * [Pre-requisites](#1-pre-requisites)
+    * [Deployment Recommendations](#11-deployment-recommendations)
+  * [Local Deployment and Testing Tools](#2-local-deployment-and-testing-tools)
+    * [MAC environment](#21-mac-environment)
+    * [LINUX environment](#21-linux-environment)
+  * [Kubernetes Dashboard](#3-kubernetes-dashboard)
+  * [Helm](#4-helm)
+    * [Helm configuration](#41-helm-configuration)
+  * [Postman](#5-postman)
+    * [Installing Postman](#51-installing-postman)
+    * [Setup Postman](#52-setup-postman)
   
-## 1 Software List
+### 1 Pre-requisites
 
-Before proceeding, please have a look at [Deployment Recommendations](mojaloop-local-deployment.md#11-deployment-recommendations) to insure the minimum resource requirements are available.
+*** TODO
+*** ADD list of pre-requisites and add link to:
+- [Kubernetes](https://kubernetes.io)
+- [Docker](https://docker.com)
+- [Postman](https://postman.com)
+- [Helm](https://helm.sh)
 
+For local guides on how to setup the pre-requisites refer to the following links:
+- [Local Setup for Linux](mojaloop-local-setup-linux.md)
+- [Local Setup for Mac](mojaloop-local-setup-mac.md)
+- [Local Setup for Windows](mojaloop-local-setup-windows.md)
 
 ### 1.1 Deployment Recommendations
 
@@ -29,21 +36,19 @@ This provides environment resource recommendations with a view of the infrastruc
 
 **Resources Requirements:**
 
-* Control Plane \(i.e. Master Node\)
-  ```https request
-  [https://kubernetes.io/docs/setup/cluster-large/\#size-of-master-and-master-components](https://kubernetes.io/docs/setup/cluster-large/#size-of-master-and-master-components)
-  ```
+* Control Plane (i.e. Master Node)
+  
+  [https://kubernetes.io/docs/setup/cluster-large/#size-of-master-and-master-components](https://kubernetes.io/docs/setup/cluster-large/#size-of-master-and-master-components)
 
-  * 3x Master Nodes for future node scaling and HA \(High Availability\)
+  * 3x Master Nodes for future node scaling and HA (High Availability)
 
 * ETCd Plane:
-  ```https request
+
   [https://coreos.com/etcd/docs/latest/op-guide/hardware.html](https://coreos.com/etcd/docs/latest/op-guide/hardware.html)
-  ```
 
-  * 3x ETCd nodes for HA \(High Availability\)
+  * 3x ETCd nodes for HA (High Availability)
 
-* Compute Plane \(i.e. Worker Node\):
+* Compute Plane (i.e. Worker Node):
 
   TBC once load testing has been concluded. However the current general \*recommended size:
 
@@ -52,17 +57,10 @@ This provides environment resource recommendations with a view of the infrastruc
 
   \*Note that this would also depend on your underlying infrastructure, and it does NOT include requirements for persistent volumes/storage.
 
-![Mojaloop Deployment Recommendations - Infrastructure Architecture](../assets/Diagrams/Kubernetes/KubeInfrastructureArch.svg)
+![Mojaloop Deployment Recommendations - Infrastructure Architecture](./assets/diagrams/deployment/KubeInfrastructureArch.svg)
 
-### 2 Local Deployment and Testing Tools
 
-##### 2.1. MAC environment
-  For Mac, please follow the [Mojaloop Local Setup Mac](mojaloop-local-setup-mac.md) document.
-
-##### 2.1. LINUX environment
-  For Linux, please follow the [Mojaloop Local Setup Linux](mojaloop-local-setup-linux.md) document.
-
-#### 3 Kubernetes Dashboard:
+#### 2 Kubernetes Dashboard:
 
 1  Install Kubernetes Dashboard roles, services & deployment.
 
@@ -72,7 +70,7 @@ This provides environment resource recommendations with a view of the infrastruc
    ```
    Remember to prefix all **kubectl** commands with **microk8s** if you opted not to create an alias.
 
-2. Alternative (not required if you have already enabled the dashboard) install for Dashboard using Helm: [kubernetes-dashboard](https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard)\)
+2. Alternative (not required if you have already enabled the dashboard) install for Dashboard using Helm: [kubernetes-dashboard](https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard))
 
    **IMPORTANT:** Always verify current [kubernetes-dashboard](https://github.com/kubernetes/dashboard) yaml file for the below create command.
    ```bash
@@ -90,7 +88,7 @@ This provides environment resource recommendations with a view of the infrastruc
    ```
 
 5. Open URI in default browser
-   ```bash
+   ```http request
    http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/
    ```
 
@@ -106,13 +104,13 @@ This provides environment resource recommendations with a view of the infrastruc
 
    The **{kubernetes-dashboard-token-btbwf}** is retrieved from the output in the previous step. For more information on generating the token, follow the **Authentication** link in the window.
 
-![kubernetes-dashboard](../assets/Diagrams/Kubernetes/kubernetesdashboard.png)
+![kubernetes-dashboard](./assets/diagrams/deployment/kubernetesDashboard.png)
 
-### 4 Helm 
+### 3 Helm 
 
 Please review [Mojaloop Helm Chart](../repositories/helm.md) to understand the relationships between the deployed Mojaloop helm charts.
 
-#### 4.1 Helm configuration
+#### 3.1 Helm configuration
 
 1. Config Helm CLI and install Helm Tiller on K8s cluster;
    ```bash
@@ -124,7 +122,7 @@ Please review [Mojaloop Helm Chart](../repositories/helm.md) to understand the r
    kubectl -n kube-system get po | grep tiller
    ```
 
-3. Add mojaloop repo to your Helm config \(optional\). Linux use with sudo;
+3. Add mojaloop repo to your Helm config (optional). Linux use with sudo;
    ```bash
    helm repo add mojaloop http://mojaloop.io/helm/repo/
    ```
@@ -146,10 +144,11 @@ Please review [Mojaloop Helm Chart](../repositories/helm.md) to understand the r
 
 7. Update your /ect/hosts;
    ```bash
-   nano /etc/hosts
+   vi /etc/hosts
    ```
    
-   add to below config;
+   Include the following line to the config:
+   
    ```text
    127.0.0.1       interop-switch.local central-kms.local forensic-logging-sidecar.local central-ledger.local central-end-user-registry.local central-directory.local central-hub.local central-settlements.local ml-api-adapter.local
    ```
@@ -165,15 +164,15 @@ Please review [Mojaloop Helm Chart](../repositories/helm.md) to understand the r
    http://test-central-ledger.mojaloop.live/health
    ```
 
-### 5 Postman
+### 4 Postman
 
 Postman is used to send requests and receive responses.
 
-#### 5.1 Installing Postman
+#### 4.1 Installing Postman
 
 Please, follow these instructions: [Get Postman](https://www.getpostman.com/postman)
 
-#### 5.2 Setup Postman
+#### 4.2 Setup Postman
 
 1. Download this file [https://raw.githubusercontent.com/mojaloop/postman/master/Mojaloop.postman_collection.json](https://raw.githubusercontent.com/mojaloop/postman/master/Mojaloop.postman_collection.json)
 2. Open **Postman**
@@ -183,20 +182,3 @@ Please, follow these instructions: [Get Postman](https://www.getpostman.com/post
 6. Click **Import** and then **Import File**
 7. Select the _MojaloopLocal.postman\_environment.json_ file you downloaded
 8. In the imported collection, navigate to the _central_ledger_ directory  
-
-
-### 6 Errors On Setup
-
-* \`central-ledger’s server IP address could not be found.
-
-  ERR\_NAME\_NOT\_RESOLVED\`
-
-  Resolved by:
-
-  * Verify that a helm chart\(s\) was installed by executing
-
-    ```bash
-    helm list
-    ```
-
-    If the helm charts are not listed, see the [Helm Chart Installation](mojaloop-local-deployment.md#221-helm-chart-installation) section to install a chart.
